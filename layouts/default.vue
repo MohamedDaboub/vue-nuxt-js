@@ -9,7 +9,7 @@
     <article class="layout__article">
       <NuxtPage/>
     </article>
-    <Footer/>
+    <!-- <Footer/> -->
   </main>
 </template>
 <style lang="scss" scoped>

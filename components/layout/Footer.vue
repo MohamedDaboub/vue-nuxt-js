@@ -2,11 +2,11 @@
     <footer class="footer">
     <!-- Première Colonne -->
     <div class="footer-column">
-        <img src="path_to_your_logo.png" alt="Restaurant Logo">
+        <img src="" alt="Restaurant Logo">
         <p>Some descriptive text about your restaurant.</p>
         <div class="social-icons">
-            <img src="path_to_facebook_icon.png" alt="Facebook">
-            <img src="path_to_twitter_icon.png" alt="Twitter">
+            <img src="" alt="Facebook">
+            <img src="" alt="Twitter">
             <!-- Add other social icons as needed -->
         </div>
     </div>
