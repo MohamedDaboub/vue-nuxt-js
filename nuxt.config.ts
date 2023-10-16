@@ -20,10 +20,9 @@ export default defineNuxtConfig({
   }],
   css: ['@/scss/main.scss'],
   runtimeConfig: {
-    // Will be available in both server and client
-    axios: {
-      baseURL: process.env.NUXT_API_URL,
-    },
+    public:{
+      apiUrl:''
+    }
   },
   vite: {
     css: {

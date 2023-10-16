@@ -1,18 +1,12 @@
-
-import MyButtonVue from '../elements/MyButton.vue';
-
-import MyButtonVue from '../elements/MyButton.vue';
-
-import { Title } from '#build/components';
-
-import { MyButton } from '#build/components';
-
-import { Title } from '#build/components';
 <script setup>
+const env = useRuntimeConfig
 const props= defineProps({
     Title:Array,
     Text:Array,
     buttons:Array,
+})
+const {data:recipes}= await useAsyncData('recipes', async()=>{
+    return $fetch(env.public.apiUrl + '/recipes')
 })
 </script>
 
@@ -33,7 +27,7 @@ const props= defineProps({
                 <a :href="button.button_link.url">{{ button.button_label }}</a>
             </button>
         </div>
-        
+        {{ recipes  }}
     </section>
 </template>
 
