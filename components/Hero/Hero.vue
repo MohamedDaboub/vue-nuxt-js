@@ -1,47 +1,62 @@
 <script setup>
-const env = useRuntimeConfig
-const props= defineProps({
-    Title:Array,
-    Text:Array,
-    buttons:Array,
-})
-const {data:recipes}= await useAsyncData('recipes', async()=>{
-    return $fetch(env.public.apiUrl + '/recipes')
-})
+const env = useRuntimeConfig;
+const props = defineProps({
+  title: Array,
+  text: Array,
+  buttons: Array,
+});
+const { data: recipes } = await useAsyncData("recipes", async () => {
+  return $fetch(env.public.apiUrl + "/recipes");
+});
 </script>
 
 <template>
-    <section class="Hero">
-        <div class="Hero__Title">
-            <PrismicRichText :field="Title"/> 
-        </div>
-        <div>
-            <PrismicRichText :field="Text"/> 
-        </div>
-        <!-- boucle for dans hero_buttons -->
-        <div v-for="(button,index) in buttons" :key="index">
-            <button v-if="button.button_Type === 'Default'" class="hero__button -default">
-                <a :href="button.button_link.url">{{ button.button_label }}</a>
-            </button>
-            <button v-else class="hero__button -video">
-                <a :href="button.button_link.url">{{ button.button_label }}</a>
-            </button>
-        </div>
-        {{ recipes  }}
-    </section>
+  <section class="c-hero">
+    <div class="c-hero__title">
+      <!-- Convert prismic rich text field to full html text -->
+      <PrismicRichText :field="title" />
+    </div>
+    <div class="c-hero__text">
+      <!-- Convert prismic rich text field to full html text -->
+      <PrismicRichText :field="text" />
+    </div>
+    <div class="c-hero__buttons">
+      <div v-for="(button, index) in buttons" class="c-hero__button">
+        <Button :href="button.button_link.url" :variant="button.button_type">{{
+          button.button_label
+        }}</Button>
+      </div>
+    </div>
+    {{ recipes }}
+  </section>
 </template>
 
-<style lang="scss" scoped>
-.Hero{
-    &.__Title{
-
-        strong{
-            color: red;
-        }
-
-        
-
+<style lang="scss">
+.c-hero {
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: black;
+    strong {
+      color: orange;
     }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 1.1;
+    color: black;
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
 }
-
 </style>
