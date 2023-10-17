@@ -1,12 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
+  modules: ['@nuxtjs/prismic'],
+  prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
   app:{
     head: {
       // Load a google font acroos all pages
       title: 'Nuxt TypeScript Starter',
       link: [
-        { rel: 'Preconnect', href: '/https://font.googleapis.com' },
-        { rel: 'stylesheet', href: '/https://font.googleapis.com' },
+        // { rel: 'Preconnect', href: '/https://font.googleapis.com' },
+        // { rel: 'stylesheet', href: '/https://font.googleapis.com' },
       ],
     }
   },
@@ -16,6 +19,11 @@ export default defineNuxtConfig({
     pathPrefix: false,
   }],
   css: ['@/scss/main.scss'],
+  runtimeConfig: {
+    public:{
+      apiUrl:''
+    }
+  },
   vite: {
     css: {
       preprocessorOptions: {

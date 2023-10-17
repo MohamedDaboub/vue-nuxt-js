@@ -5,6 +5,7 @@
     </header>
     <aside class="layout__aside">
       <slot name="aside"></slot>
+      
     </aside>
     <article class="layout__article">
       <NuxtPage/>
@@ -28,9 +29,6 @@
       'footer footer footer';
   }
 
-  > * {
-    padding: rem(0);
-  }
   &__article {
     grid-area: article;
   }
