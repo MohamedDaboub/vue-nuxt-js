@@ -8,6 +8,11 @@ const { data: home, error } = await useAsyncData("home", () =>
 if (!home.value || error.value) {
   throw createError({ statusCode: 404, message: "Page jjjj not found" });
 }
+useSeoMeta({
+  title: home.value.data.meta_title,
+  description: home.value.data.meta_description,
+  image: home.value.data.meta_image.url,
+});
 </script>
 <template>
   <div class="">

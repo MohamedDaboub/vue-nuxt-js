@@ -7,6 +7,12 @@ const props = defineProps({
   description: String,
   Icon: String,
 });
+const isAlreadyInCart = computed(() => {
+  return store.card.includes(props.recipe_id)
+})
+const buttonLabel  = computed(() => {
+  return isAlreadyInCart(recipe_id) ? 'Retirer du panier' : 'Ajouter au panier'
+})
 
 </script>
 
@@ -22,6 +28,12 @@ const props = defineProps({
       <div>
         <MyParagraph :content="description"></MyParagraph>
       </div>
+      <div>
+
+      </div>
+      <button>
+        {{ buttonLabel }}
+      </button>
     </div>
 
   </div>
