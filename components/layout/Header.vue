@@ -1,4 +1,8 @@
 <script setup>
+import {useGlobalStore} from '@/stores/global'
+
+const store = useGlobalStore()
+console.log(store)
 
 </script>
 
@@ -20,7 +24,8 @@
         <MyIcon name="IconSearch"  ></MyIcon>
         <input type="search" placeholder="Rechercher...">
       </div>
-      <MyIcon class="right-side--border" name="IconShopBag"  ></MyIcon>
+      <MyIcon class="right-side--border" name="IconShopBag" @click="store.increment()" ></MyIcon>
+      {{ store.cart }}
     </div>
   </header>
 </template>
