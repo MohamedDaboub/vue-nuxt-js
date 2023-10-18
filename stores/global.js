@@ -10,6 +10,14 @@ export const useGlobalStore = defineStore('global', {
         increment() {
             this.count++
         },
+        setCart (ids){
+            // this.cart = ids
+            if (!ids || !Array.isArray(ids)) {
+                return (id)
+            }
+            this.cart = ids
+        
+        },
         addToCart(id) {
             // prevent recipe ti be added multiple times
             if (!this.cart.includes(id))
