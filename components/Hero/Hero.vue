@@ -13,6 +13,10 @@ const { data: recipes } = await useAsyncData("recipes", async () => {
 <template>
   <section class="c-hero">
     <div>
+      <button class="c-hero__bike">
+        Bike Delivery
+        <img  class="c-hero__bike__img" src="/img/BikeDelivery.png" alt="">
+      </button>
       <div class="c-hero__title">
         <!-- Convert prismic rich text field to full html text -->
         <PrismicRichText :field="title" />
@@ -23,7 +27,7 @@ const { data: recipes } = await useAsyncData("recipes", async () => {
       </div>
       <div class="c-hero__buttons">
         <div v-for="(button, index) in buttons" class="c-hero__button">
-          <MyButton 
+          <MyButton
             :href="button.button_link.url"
             :variant="button.button_type"
             >{{ button.button_label }}</MyButton
@@ -39,10 +43,30 @@ const { data: recipes } = await useAsyncData("recipes", async () => {
 
 <style lang="scss">
 .c-hero {
-  margin: rem(60);
+  margin: rem(10) rem(60);
   display: grid;
   // deux colonnes de 1fr
   grid-template-columns: repeat(2, 1fr);
+  &__bike {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    gap: rem(35);
+    border: none;
+    border-radius: rem(15);
+    color: $primary-color;
+    background: $secondary-color;
+    border-radius: rem(37);
+    font-weight: 500;
+    padding: rem(5) rem(10);
+    font-size: $regular-font-size;
+    margin-bottom: rem(10);
+    &__img{
+      border-radius: 25px;
+      width: 54px;
+      height: 54px;
+    }
+  }
   &__title {
     font-size: $giant-font-size;
     font-weight: 700;

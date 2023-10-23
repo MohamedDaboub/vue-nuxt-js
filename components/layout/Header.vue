@@ -9,7 +9,7 @@ console.log(store)
 <template>
   <header>
     <div class="logo">
-      <img src="./assets/Logo.png" alt="Logo">
+      <img src="/img/logo.png" alt="Logo">
     </div>
     <nav class="menu">
       <ul>

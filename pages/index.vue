@@ -16,17 +16,13 @@ useSeoMeta({
 </script>
 <template>
   <div class="">
-    <!-- <RecipeCard v-bind="{title:'Titre de la recette', description:'une description'}"/>
-    page d'accueil -->
   </div>
-  <!-- donne moi le rendu juste le texte sans  -->
   <div class="hero">
     <Hero
       :title="home.data.hero_title"
       :text="home.data.hero_texte"
       :buttons="home.data.hero_buttons"
     />
-    <!-- <PrismicRichText v-bind="{field: home.data.hero_title}"/>  -->
   </div>
   <Information :information="home.data.short_list" />
 
