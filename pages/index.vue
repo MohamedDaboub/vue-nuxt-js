@@ -25,6 +25,7 @@ useSeoMeta({
     />
   </div>
   <Information :information="home.data.short_list" />
+  <Services :Services="home.data.services_list" />
 
   <HowTo
     v-bind="{

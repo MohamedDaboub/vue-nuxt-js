@@ -1,27 +1,27 @@
 <script setup>
 const props = defineProps({
-  information: Array,
+    Services: Array,
 });
 </script>
 
 <template>
-  <section class="c-information">
-    <div v-for="item in information" class="c-information__item">
-      <div class="c-information__icon">
-        <img :src="`/icons/${item.short_list_icon}.svg`" alt="" />
+  <section class="c-Services">
+    <div v-for="item in Services" class="c-Services__item">
+      <div class="c-Services__icon">
+        <img :src="`/icons/${item.services_list_icon}.svg`" alt="" />
       </div>
-      <div class="c-information__title">
-        <PrismicRichText :field="item.short_list_title" />
+      <div class="c-Services__title">
+        <PrismicRichText :field="item.services_list_title" />
       </div>
-      <div class="c-information__text">
-        <PrismicRichText :field="item.short_list_text" />
+      <div class="c-Services__text">
+        <PrismicRichText :field="item.services_list_texte" />
       </div>
     </div>
   </section>
 </template>
 
-<style lang="scss" scoped>
-.c-information {
+<style lang="scss">
+.c-Services {
   display: flex;
   flex-flow: row wrap;
   border-radius: rem(20);
@@ -47,7 +47,7 @@ const props = defineProps({
     padding: 10px;
     align-items: center;
     justify-content: center;
-    background-color: $primary-color;
+    background-color: $secondary-color;
     stroke: $white;
     border-radius: 50%;
   }
