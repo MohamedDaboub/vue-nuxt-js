@@ -20,7 +20,7 @@ const props = defineProps({
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .c-information {
   display: flex;
   flex-flow: row wrap;
@@ -50,17 +50,6 @@ const props = defineProps({
     background-color: $primary-color;
     stroke: $white;
     border-radius: 50%;
-  }
-  &__title {
-    font-weight: 700;
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-  &__text {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
   }
 }
 </style>
