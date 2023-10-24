@@ -22,22 +22,21 @@ const isOdd = (index) =>{
 </template>
 
 <style lang="scss" scoped>
-
-.c-how-to__tag{
+.c-how-to{
+    &__tag{
     display: block;
     font-size: $regular-font-size;
     color: $primary-color;
     margin-bottom: 1rem;
     text-align: center;
     margin: rem(30) rem(0) rem(0) rem(0);
-}
-.c-how-to__title{
+}    
+    &__title{
     font-size: $big-font-size;
     font-weight: 700;
     text-align: center;
     margin-bottom: rem(30);
 }
-.c-how-to{
     &__list{
         display: flex;
         flex-flow: row wrap;

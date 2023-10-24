@@ -25,7 +25,12 @@ useSeoMeta({
     />
   </div>
   <Information :information="home.data.short_list" />
-  <Services :Services="home.data.services_list" />
+  <Services 
+  v-bind="{
+          tag: 'Services',
+      title: 'Why Choose Our Favorite Food',
+  }"
+  :Services="home.data.services_list" />
 
   <HowTo
     v-bind="{

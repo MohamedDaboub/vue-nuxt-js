@@ -51,16 +51,5 @@ const props = defineProps({
     stroke: $white;
     border-radius: 50%;
   }
-  &__title {
-    font-weight: 700;
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-  &__text {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
 }
 </style>

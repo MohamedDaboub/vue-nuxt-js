@@ -1,10 +1,16 @@
 <script setup>
 const props = defineProps({
-    Services: Array,
+  tag: String,
+  title: String,
+  Services: Array,
 });
 </script>
 
 <template>
+  <div class="c-Service">
+    <span class="c-Service__tag">{{ tag }}</span>
+    <h2 class="c-Service__title">{{ title }}</h2>
+  </div>
   <section class="c-Services">
     <div v-for="item in Services" class="c-Services__item">
       <div class="c-Services__icon">
@@ -20,47 +26,63 @@ const props = defineProps({
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.c-Service {
+  margin: rem(70) rem(0);
+  &__tag {
+    display: block;
+    font-size: $regular-font-size;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin: rem(30) rem(0) rem(0) rem(0);
+  }
+  &__title {
+    font-size: $big-font-size;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: rem(30);
+  }
+}
 .c-Services {
   display: flex;
-  flex-flow: row wrap;
-  border-radius: rem(20);
-  padding: rem(35);
-  margin: rem(20) rem(60);
+  justify-content: center;
+  gap: rem(30);
+  margin: rem(70) rem(0);
 
-  box-shadow: 0px rem(1) rem(4) rgba(0, 0, 0, 0.25);
   &__item {
-    flex: 1;
+    border-radius: rem(10);
+    border: $gray solid rem(1);
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    padding: rem(45);
+
+    flex-direction: column;
+    // justify-content: center;
     align-items: center;
-    &:nth-child(2) {
-      border-left: 2px solid $gray;
-      border-right: 2px solid $gray;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      background-color: #ffffff;
+      border: rem(1) solid #b6b6b6;
     }
   }
   &__icon {
-    display: inline-flex;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: rem(20);
     background-color: $secondary-color;
-    stroke: $white;
     border-radius: 50%;
+    height: rem(30);
+    padding: rem(10);
+    width: rem(30);
   }
   &__title {
+    font-size: $medium-font-size;
     font-weight: 700;
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
+    margin-bottom: rem(20);
   }
   &__text {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
+    font-size: $regular-font-size;
+    font-weight: 400;
+    text-align: center;
   }
 }
 </style>
