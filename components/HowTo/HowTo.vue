@@ -17,6 +17,8 @@ const isOdd = (index) =>{
         <div :class="['c-how-to__item']" v-for="(item,index) in items" :key="index">
             <HowToItem :title="item.how_to_title" :content="item.how_to_content" :image="item.how_to_image" :reversed="isOdd(index)"/>
         </div>
+        <img class="c-how-to__list__img" src="/img/vector.png" alt="">
+        <img class="c-how-to__list__imgR" src="/img/vectorR.png" alt="">
     </div>
 </section>
 </template>
@@ -40,6 +42,21 @@ const isOdd = (index) =>{
     &__list{
         display: flex;
         flex-flow: row wrap;
+        position: relative;
+        &__img{
+            position: absolute;
+            top: 9%;
+            left: 15%;
+            width: 28%;
+            height: 60%;
+        }
+        &__imgR{
+            position: absolute;
+            top: 9%;
+            right: 14%;
+            width: 29%;
+            height: 60%;
+        }
     }
     &__item{
         flex: 1;

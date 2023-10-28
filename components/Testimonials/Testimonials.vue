@@ -96,15 +96,13 @@ const nextTestimonial = () => {
         position: absolute;
         top: 50%;
         left: -3%;
-        // on peux click sur le bouton
-        cursor: pointer;
+        
         
     }
     &__BL{
         position: absolute;
         top: 50%;
         right: -3%;
-        cursor: pointer;
     }
 
     &__image{
