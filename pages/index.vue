@@ -45,6 +45,7 @@ useSeoMeta({
       title: 'Our Happy Client Says',
       testimonials: home.data.testimonials_list,
     }"/>
+  <Newsletter/>
 </template>
 
 <style lang="scss"></style>

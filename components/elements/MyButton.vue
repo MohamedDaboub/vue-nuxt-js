@@ -41,7 +41,7 @@ const className = computed(() => {
 
   &.-rounded {
     background: $primary-color;
-    border-radius: rem(37);
+    border-radius: rem(15);
     font-weight: 500;
     padding: rem(26) rem(64);
   }
