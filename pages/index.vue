@@ -39,6 +39,13 @@ useSeoMeta({
       items: home.data.how_to,
     }"
   />
+  <Testimonials
+    v-bind="{
+      tag: 'Testimonials',
+      title: 'Our Happy Client Says',
+      testimonials: home.data.testimonials_list,
+    }"/>
+  <Newsletter/>
 </template>
 
 <style lang="scss"></style>

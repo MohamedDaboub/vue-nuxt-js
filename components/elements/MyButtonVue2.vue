@@ -7,8 +7,6 @@ export default {
     variant: String
   },
   data() {
-    /* J'ai corrigé cette partie après le cours avec une gestion des classes beaucoup plus simple. 
-J'avais oublié qu'on pouvait mettre des objets dans le className */
     return {
       className: {
         ' -rounded': this.variant === 'rounded',
