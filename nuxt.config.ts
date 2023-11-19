@@ -3,11 +3,17 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/prismic', '@pinia/nuxt'],
   prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
-  imports: {
-    transform: {
-      // you could also add the path of your built library to prevent this happening 
-      // for your users, but the issue is probably only replicable in your monorepo
-      exclude: [/\bsfui\b/]
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vite'],
+  build: {
+    extractCSS: true,
+    transpile: ['vue-final-modal'],
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
+    assets: {
+      // Assurez-vous que ce chemin correspond à la structure de votre projet
+      // Par défaut, c'est 'static' dans Nuxt 2.x
+      prefix: '/assets/'
     }
   },
   app: {
