@@ -17,7 +17,7 @@ client.getSingle("homepage")
     <div>
       <button class="c-hero__bike">
         Bike Delivery
-        <img  class="c-hero__bike__img" src="../../assets/bikedelivery.jpg" alt="bike"/>
+        <img  class="c-hero__bike__img" src="/bikedelivery.jpg" alt="bike"/>
       </button>
       <div class="c-hero__title">
         <PrismicRichText :field="title" />
@@ -25,7 +25,7 @@ client.getSingle("homepage")
       <div class="c-hero__text">
         <PrismicRichText :field="text" />
       </div>
-      <img class="c-hero__vect" src="../../assets/Hero_vect.jpg" alt="fleche"/>
+      <img class="c-hero__vect" src="/Hero_vect.jpg" alt="fleche"/>
       <div class="c-hero__buttons">
         <div v-for="(button, index) in buttons" :key="index" class="c-hero__button">
           <MyButtonPrismic
