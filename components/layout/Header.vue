@@ -8,7 +8,7 @@ const store = useGlobalStore()
 <template>
   <header>
     <div class="logo">
-      <img src="img/logo.png" alt="Logo">
+      <img src="logo.png" alt="Logo">
     </div>
     <nav class="menu">
       <ul>
