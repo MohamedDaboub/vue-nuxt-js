@@ -26,7 +26,7 @@ client.getSingle("homepage")
       <div class="c-hero__text">
         <PrismicRichText :field="text" />
       </div>
-      <img class="c-hero__vect" src="public/img/Hero_vect.png" alt="">
+      <img class="c-hero__vect" src="../../public/img/Hero_vect.png" alt="">
       <div class="c-hero__buttons">
         <div v-for="(button, index) in buttons" :key="index" class="c-hero__button">
           <MyButtonPrismic
@@ -50,11 +50,6 @@ client.getSingle("homepage")
   position: relative;
   grid-template-columns: repeat(2, 1fr);
 
-  // &__Card{
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   grid-gap: 1rem;
-  // }
   &__vect{
     position: absolute;
     top: 20%;

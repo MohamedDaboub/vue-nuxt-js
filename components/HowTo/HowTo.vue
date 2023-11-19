@@ -17,8 +17,8 @@ const isOdd = (index) =>{
         <div :class="['c-how-to__item']" v-for="(item,index) in items" :key="index">
             <HowToItem :title="item.how_to_title" :content="item.how_to_content" :image="item.how_to_image" :reversed="isOdd(index)"/>
         </div>
-        <img class="c-how-to__list__img" src="/img/vector.png" alt="">
-        <img class="c-how-to__list__imgR" src="/img/vectorR.png" alt="">
+        <img class="c-how-to__list__img" src="../../public/img/vector.png" alt="">
+        <img class="c-how-to__list__imgR" src="../../public/img/vectorR.png" alt="">
     </div>
 </section>
 </template>
