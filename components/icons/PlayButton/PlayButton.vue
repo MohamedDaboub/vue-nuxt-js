@@ -28,8 +28,8 @@
 
 <style lang="scss">
 .i-play-button {
-  width: 60px;
-  height: 60px;
+  width: rem(100);
+  height: rem(100);
   svg {
     width: 100%;
     height: 100%;

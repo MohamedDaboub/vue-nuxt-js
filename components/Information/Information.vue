@@ -6,7 +6,7 @@ const props = defineProps({
 
 <template>
   <section class="c-information">
-    <div v-for="item in information" class="c-information__item">
+    <div v-for="item in information" class="c-information__item" :key="item">
       <div class="c-information__icon">
         <img :src="`/icons/${item.short_list_icon}.svg`" alt="" />
       </div>

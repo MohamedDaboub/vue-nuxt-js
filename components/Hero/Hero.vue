@@ -1,13 +1,15 @@
 <script setup>
-const env = useRuntimeConfig;
+
 const props = defineProps({
   title: Array,
   text: Array,
   buttons: Array,
 });
-const { data: recipes } = await useAsyncData("recipes", async () => {
-  return $fetch(env.public.apiUrl + "/recipes");
-});
+
+const { client } = usePrismic();
+const { data: home, error } = await useAsyncData("home", () =>
+client.getSingle("homepage")
+);
 </script>
 
 <template>
@@ -18,26 +20,25 @@ const { data: recipes } = await useAsyncData("recipes", async () => {
         <img  class="c-hero__bike__img" src="/img/BikeDelivery.png" alt="">
       </button>
       <div class="c-hero__title">
-        <!-- Convert prismic rich text field to full html text -->
         <PrismicRichText :field="title" />
       </div>
       <div class="c-hero__text">
-        <!-- Convert prismic rich text field to full html text -->
         <PrismicRichText :field="text" />
       </div>
+      <img class="c-hero__vect" src="/img/Hero_vect.png" alt="">
       <div class="c-hero__buttons">
-        <div v-for="(button, index) in buttons" class="c-hero__button">
-          <MyButton
+        <div v-for="(button, index) in buttons" :key="index" class="c-hero__button">
+          <MyButtonPrismic
             :href="button.button_link.url"
             :variant="button.button_type"
-            >{{ button.button_label }}</MyButton
+            >{{ button.button_label }}</MyButtonPrismic
           >
         </div>
       </div>
     </div>
-    <div>
-      {{ recipes }}
-    </div>
+  <div >
+    <MyCardPro class="c-hero__Card" :MyCardPro="home.data.card_groupe" />
+  </div>
   </section>
 </template>
 
@@ -45,8 +46,20 @@ const { data: recipes } = await useAsyncData("recipes", async () => {
 .c-hero {
   margin: rem(10) rem(60);
   display: grid;
-  // deux colonnes de 1fr
+  position: relative;
   grid-template-columns: repeat(2, 1fr);
+
+  // &__Card{
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-gap: 1rem;
+  // }
+  &__vect{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 30%;
+  }
   &__bike {
     display: flex;
     align-items: center;  

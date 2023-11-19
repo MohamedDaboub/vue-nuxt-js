@@ -2,7 +2,6 @@
 import {useGlobalStore} from '@/stores/global'
 
 const store = useGlobalStore()
-console.log(store)
 
 </script>
 
@@ -38,6 +37,10 @@ header {
   padding: rem(20) rem(50);
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
   .logo img {
       height: rem(50);
       width: auto;
@@ -81,8 +84,8 @@ header {
         border-radius: rem(15);
     }
     &--border{
-        border-left: 1px solid $gray;
-        border-radius: 0px 10px 10px 0px;
+        border-left: rem(1) solid $gray;
+        border-radius: 0px rem(10) rem(10) 0px;
     }
     }
 }
