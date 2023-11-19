@@ -3,9 +3,8 @@
     <div class="footer__column">
       <img
         class="footer__logo"
-        src="/Logo-Footer.jpg"
-        alt="Restaurant Logo"
-      />
+        src="../../assets/Logo-Footer.jpg"
+        alt="Restaurant Logo">
       <MyParagraph
         paragraphe_Size="p2"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo libero viverra dapibus odio sit malesuada in quis. Arcu tristique elementum viverra integer id."

@@ -5,7 +5,7 @@
 <template>
     <section class="c-newsletter">
         <div class="c-newsletter__img">
-            <img src="/burger_sandwich.jpg" alt="burger_sandwich"/>
+            <img src="../../assets/burger_sandwich.jpg" alt="burger_sandwich">
         </div>
         <div class="">
             <h3 class="c-newsletter__title">Subcribe To Our Newsletter</h3>
