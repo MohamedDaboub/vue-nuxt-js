@@ -54,7 +54,7 @@ const nextTestimonial = () => {
     <MyIcon class="c-testimonials__item__BL" name="IconFlecheD" variant="Orange" size="Small" @click="nextTestimonial"/>
     </div>
     <div>
-      <img src="../../public/img/Testimonials-Ph.png" alt="" />
+      <img src="img/Testimonials-Ph.png" alt="" />
     </div>
   </section>
 </template>

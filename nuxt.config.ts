@@ -32,11 +32,11 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    resolve: {
-      alias: {
-        '@img': '/opt/build/repo/img', // Adjust the path accordingly
-      },
-    },
+    // resolve: {
+    //   alias: {
+    //     '@img': '/opt/build/repo/img', // Adjust the path accordingly
+    //   },
+    // },
     css: {
       preprocessorOptions: {
         scss: {
