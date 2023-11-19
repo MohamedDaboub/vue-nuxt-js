@@ -17,7 +17,8 @@ client.getSingle("homepage")
     <div>
       <button class="c-hero__bike">
         Bike Delivery
-        <img  class="c-hero__bike__img" src="/bikedelivery.png" alt="">
+        <!-- <img  class="c-hero__bike__img" src="../../../img/bikedelivery.png" alt=""> -->
+        <img  class="c-hero__bike__img" src="../../public/img/bikedelivery.png" alt="">
       </button>
       <div class="c-hero__title">
         <PrismicRichText :field="title" />
