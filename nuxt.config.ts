@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
-  ssr: true,
   modules: ['@nuxtjs/prismic', '@pinia/nuxt'],
   prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
   imports: {
@@ -32,11 +31,11 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    // resolve: {
-    //   alias: {
-    //     '@img': '/opt/build/repo/img', // Adjust the path accordingly
-    //   },
-    // },
+    resolve: {
+      alias: {
+        '@img': '/opt/build/repo/img', // Adjust the path accordingly
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {
@@ -45,4 +44,5 @@ export default defineNuxtConfig({
       },
     },
   }
+  
 })
