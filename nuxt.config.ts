@@ -1,16 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
+  ssr: true,
   modules: ['@nuxtjs/prismic', '@pinia/nuxt'],
   prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
-  app:{
+  imports: {
+    transform: {
+      // you could also add the path of your built library to prevent this happening 
+      // for your users, but the issue is probably only replicable in your monorepo
+      exclude: [/\bsfui\b/]
+    }
+  },
+  app: {
     head: {
-      // Load a google font acroos all pages
-      title: 'Nuxt TypeScript Starter',
+      title: 'Nuxt 3 app',
       link: [
-        // { rel: 'Preconnect', href: '/https://font.googleapis.com' },
-        // { rel: 'stylesheet', href: '/https://font.googleapis.com' },
-      ],
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap' }
+      ]
     }
   },
   devtools: { enabled: true },
@@ -25,6 +32,11 @@ export default defineNuxtConfig({
     }
   },
   vite: {
+    resolve: {
+      alias: {
+        '@img': '/opt/build/repo/img', // Adjust the path accordingly
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {
