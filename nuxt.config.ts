@@ -3,19 +3,6 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/prismic', '@pinia/nuxt'],
   prismic: { endpoint: process.env.NUXT_PRISMIC_ENDPOINT },
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vite'],
-  build: {
-    extractCSS: true,
-    transpile: ['vue-final-modal'],
-    babel: {
-      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
-    },
-    assets: {
-      // Assurez-vous que ce chemin correspond à la structure de votre projet
-      // Par défaut, c'est 'static' dans Nuxt 2.x
-      prefix: '/assets/'
-    }
-  },
   app: {
     head: {
       title: 'Nuxt 3 app',

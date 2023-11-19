@@ -36,7 +36,7 @@ const props = defineProps({
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin: rem(80) rem(0);
+    margin: rem(90) rem(0);
     margin-left:150px ;
 }
 .AllCard::before{
@@ -61,9 +61,8 @@ const props = defineProps({
       background: $white;
       &__Image {
         position: absolute;
-
-          width: 100%; 
-          transform: translateX(-5%) translateY(-70%);
+          width: 90%; 
+          transform: translateX(3%) translateY(-70%);
         filter: drop-shadow(0px rem(0) rem(10) rgba(0, 0, 0, 0.20));
       }
       &__content {
