@@ -3,7 +3,7 @@
     <div class="footer__column">
       <img
         class="footer__logo"
-        src="/Logo-Footer.jpg"
+        src="../../assets/Logo-Footer.jpg"
         alt="Restaurant Logo"
       />
       <MyParagraph
