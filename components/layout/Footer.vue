@@ -13,7 +13,7 @@
         <MyIcon name="IconFacebook" variant="Orage Claire" size="Small" />
         <MyIcon name="IconInstagram" variant="Orage Claire" size="Small" />
         <MyIcon name="IconTwitter" variant="Orage Claire" size="Small" />
-        <MyIcon name="Iconlinkedin" variant="Orage Claire" size="Small" />
+        <MyIcon name="IconLinkedin" variant="Orage Claire" size="Small" />
       </div>
     </div>
     <div class="footer__column">
