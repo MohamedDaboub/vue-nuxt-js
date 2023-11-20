@@ -9,7 +9,7 @@ import IconFlecheD from '../icons/IconFlecheD.vue';
 import IconFlecheG from '../icons/IconFlecheG.vue';
 import IconInstagram from '../icons/IconInstagram.vue';
 import IconTwitter from '../icons/IconTwitter.vue';
-import Iconlinkedin from '../icons/Iconlinkedin.vue';
+import IconLinkedin from '../icons/IconLinkedin.vue';
 import IconFacebook from '../icons/IconFacebook.vue';
 import IconChevronRight from '../icons/IconChevronRight.vue';
 import IconSearch from '../icons/IconSearch.vue';
@@ -58,8 +58,8 @@ const getIcon = computed(()=>{
     return IconInstagram
   case 'IconTwitter':
     return IconTwitter
-  case 'Iconlinkedin':
-    return Iconlinkedin
+  case 'IconLinkedin':
+    return IconLinkedin
   case 'IconFacebook':
     return IconFacebook  
   case 'IconChevronRight':
